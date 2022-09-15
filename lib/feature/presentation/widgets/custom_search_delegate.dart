@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:state_menagements/common/app_colors.dart';
 import 'package:state_menagements/feature/domain/entities/person.dart';
 import 'package:state_menagements/feature/presentation/bloc/search_bloc/search_bloc.dart';
 import 'package:state_menagements/feature/presentation/bloc/search_bloc/search_event.dart';
@@ -19,8 +20,7 @@ class CustomSearchDelegate extends SearchDelegate {
   ];
 
   Widget _showErrorText(String message) {
-    return Container(
-      color: Colors.black,
+    return Center(
       child: Text(
         message,
         style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
